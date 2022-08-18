@@ -22,7 +22,7 @@ $result_s = mysqli_query($conexao, $sqltwo);
 
 if(mysqli_num_rows($result)>0){
     if(mysqli_num_rows($result_s) > 0){
-        #header('Location:login.html');
+        header('Location: intro.html');
         echo "Entrou";
     }
     else{
