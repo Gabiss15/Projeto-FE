@@ -30,21 +30,63 @@
     <main>
         <section>
             <div class="item-1">
-                <a href="">Prontuário Familiar</a>
+                <a onclick="prontuarios()">Prontuário Familiar</a>
             </div>
             <div class="item-2">
-                <a href="">Cadastrar Prontuário</a>
+                <a onclick="">Cadastrar Prontuário</a>
             </div>
             <div class="item-3">
-                <a href="">
+                <a onclick="">
                     Editar Prontuário
                 </a>
             </div>
             <div class="item-4">
-                <a href="">Cartão Vacinal</a>
+                <a onclick="">Cartão Vacinal</a>
             </div>
         </section>
 
+        <article>
+            <div class="prontuario">
+                <h4 id="search-1">Pesquisar por:</h4>
+                <button onclick="nPront()"> Número de Prontuário</button>
+                <button onclick="nResp()">Nome do Responsável</button>
+
+                <div class="numero-p">
+                    <form action="visualizar.php" method="POST">
+                        <p> Digite o Número do Prontuário:
+                            <input type="text" name="searchNumero" id="numeroPront">
+                        </p>
+                        <input type="submit" value="Buscar">
+                    </form>
+                </div>
+
+                <div class="nome-r">
+                    <form action="visualizar.php" method="POST">
+                        <p> Digite o Nome do Responsável:
+                            <input type="text" name="searchNome" id="numeroPront">
+                        </p>
+
+                        <input type="submit" value="Buscar">
+                    </form>
+                </div>
+            </div>
+        </article>
     </main>
+
+    <script>
+        function prontuarios(){
+            let n = document.querySelector("div.prontuario")
+            n.style.display = "flex"
+        }
+
+        function nPront(){
+            let n = document.querySelector("div.numero-p")
+                n.style.display = "flex"
+        }
+        function nResp(){
+            let n = document.querySelector("div.nome-r")
+                n.style.display = "flex"
+        }
+    </script>
 </body>
 </html>
