@@ -2,8 +2,13 @@
     margin: 0;
     padding: 0;
 }
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC&family=Nunito+Sans&family=Poppins:wght@300&display=swap');
+
 body{
-    background-color: #deecff;
+    background: url('img/pexels-gustavo-fring-7446987.jpg') center ;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Cormorant SC', serif;
+    font-family: 'Nunito Sans', sans-serif;
 }
 header{
     display: flex;
@@ -48,7 +53,6 @@ header{
 }
 
 h5{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color:#004aad ;
     -webkit-transform: skew(20deg);
     margin-right:70px;
@@ -82,7 +86,6 @@ section{
 }
 
 a{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color:#000;
     font-weight: none;
     text-decoration: none;
@@ -117,9 +120,6 @@ button{
     padding-top: 2em;
     padding-left: 2em;
 }
-#search-1{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 
 input{
     width: 200px;
@@ -131,9 +131,6 @@ input{
     margin-left: 15px;
 }
 
-p, h4{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 a:visited{
     color: #fff;
 }
