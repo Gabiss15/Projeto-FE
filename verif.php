@@ -2,11 +2,16 @@
 $usuario = $_POST['usuario'];
 $senha = $_POST['senha'];
 
-$host = "localhost";
-$database = "projeto_integrador";
-$user = "root";
-$password = "";
+    //Config file
+$config_file = file_get_contents("config.json");
+$config = json_decode($config_file, true);
 
+//Getting data from config file
+$host = $config['host'];
+$database = $config['database'];
+#Tabela do cartAo vacinal
+$username = $config['username'];
+$password = $config['password'];
 $conexao = mysqli_connect($host, $user, $password, $database);
 
 if(!$conexao){

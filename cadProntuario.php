@@ -17,11 +17,16 @@
     echo 'Data'.$data.'</br>';
     echo 'Endereco'.$endereco.'</br>';
 
-    $host = "localhost";
-    $database = "projeto_integrador";
+    //Config file
+    $config_file = file_get_contents("config.json");
+    $config = json_decode($config_file, true);
+    
+    //Getting data from config file
+    $host = $config['host'];
+    $database = $config['database'];
     #Tabela do cartAo vacinal
-    $username = "root";
-    $password = "";
+    $username = $config['username'];
+    $password = $config['password'];
 
     #para estabelecer conexao com banco de dados
     $conexao = mysqli_connect($host, $username, $password, $database);
@@ -37,4 +42,3 @@
     mysqli_close($conexao);
 
     header('Location:cadastro.html');
-?>
